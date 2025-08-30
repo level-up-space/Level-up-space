@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Up Space </title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logoicon.png" sizes="16X16" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Lalezar&family=Marhey:wght@300..700&family=Noto+Sans+Arabic:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Lalezar&family=Marhey:wght@300..700&family=Noto+Sans+Arabic:wght@100..900&family=Rammetto+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+   <style>
+        body {
+             font-family: "Tajawal", sans-serif;
+            margin: 0;
+            padding: 0;
+             background-image: url("bakimg.png");
+             background-position: bottom ;
+            background-color: #FFFAFA;
+            color: #333;
+            direction: rtl;
+        }
+
+        header {
+           
+            color: #647BCC;
+            padding: 1rem 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #647BCC;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #2249B3;
+            text-decoration: underline;
+        }
+
+        .welcome {
+            background-color: #e9e9e9;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 8px;
+        }
+
+        .welcome h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        section {
+            padding: 3rem 2rem;
+            margin: 20px auto;
+            width: 80%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        section p, section ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        section ul {
+            padding-left: 20px;
+        }
+
+        section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .vision-content {
+            text-align: center;
+        }
+
+        .vision-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .services {
+            background-color: #FF8040;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        footer {
+            background-color: #FF8040;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {color: #ddd;
+        }
+
+        /* AOS Animation Styles */
+        [data-aos] {
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header .logo img {
+                width: 80px;
+            }
+
+            header nav ul {
+                margin-top: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin: 5px 0;
+            }
+
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Frame 9 (1).svg" alt="شعار الأكاديمية">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">من نحن</a></li>
+                
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="#" style="background-color: #FF8040; padding: 6px; border-radius: 25px; color: #ffffff; border: 2px solid #FF8040;">تسجيل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="welcome" data-aos="fade-in" data-aos-duration="1000">
+        <h1>مرحباً بكم في <span style="font-family: Rammetto One, sans-serif; color:#FF8040; text-decoration:underline;">Level up space</span></h1>
+        <p>نحن هنا لتمكين الجيل القادم من قادة التكنولوجيا.</p>
+    </section>
+
+    <section class="about" id="about" data-aos="fade-right" data-aos-duration="1000">
+        <h2>من نحن</h2>
+        <p>
+من قلب المجال التعليمي، بدأت قصتنا…
+ رأينا طلابنا يتحلون بالشغف والإبداع، ويمتلكون أدوات مميزة، ومع ذلك كان غياب المختبر المخصص والمدرب المتخصص أكبر عقبة تواجههم. عندها قررنا أن نكون الجسر الذي يحملهم نحو مستقبلهم. أطلقنا شركتنا لنمنح كل طالب فرصة الانطلاق، ونحوّل البرمجة والتصميم من حلم بعيد إلى مهارة أساسية في القرن الحادي والعشرين. نحن نخلق بيئة تعليمية تفاعلية تشعل الحماس، وتفتح العقول، وتشكل قادة المستقبل في العلوم والتكنولوجيا.        </p>
+    </section>
+
+    <section class="vision" id="vision" data-aos="fade-left" data-aos-duration="1000">
+        <h2>رؤيتنا وأهدافنا</h2>
+        <div class="vision-content">
+            <h3>رؤيتنا</h3>
+            <p>
+تتمثل الرؤية في تمكين الطلاب من الوصول إلى مهارات البرمجة والتصميم من خلال توفير بيئة تعليمية تفاعلية تدعم الإبداع والشغف. الهدف هو تحويل هذه المهارات إلى أساسيات ضرورية في القرن الحادي والعشرين، مما يساهم في تشكيل قادة المستقبل في مجالات العلوم والتكنولوجيا.
+
+            </p>
+            <h3>أهدافنا</h3>
+            <ul>
+                <li>تعزيز الإبداع: خلق بيئة تعليمية تشجع على الابتكار والتفكير النقدي.
+
+</li>
+                <li>تطوير المهارات الأساسية: تحويل البرمجة والتصميم إلى مهارات أساسية يحتاجها الطلاب في عصر التكنولوجيا.</li>
+                <li>تشجيع الشغف: تحفيز الطلاب على استكشاف مجالات جديدة وتطوير اهتماماتهم في العلوم والتكنولوجيا.</li>
+                <li>إعداد قادة المستقبل: تزويد الطلاب بالمعرفة والمهارات اللازمة ليصبحوا قادة في مجالاتهم.
+
+</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 style="color: #E9E9E9;">خدماتنا</h2>
+        <div class="cards-container">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
+                <i class="fas fa-graduation-cap fa-5x" style="color: #0046FF;"></i>
+                <h3>تدريب أسبوعي </h3>
+                <p>
+مبادرة شاملة تستهدف جميع طلاب المدرسة، تُنفَّذ بشكل مستمر ومنهجي على مدار العام الدراسي، لضمان تحقيق أثر تعليمي مستدام.
+                </p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
+                <i class="fas fa-robot fa-5x" style="color: #0046FF;"></i>
+                <h3> تدريب مسابقات</h3>
+                <p>
+برنامج نوعي مخصص للطلاب المرشحين لتمثيل المدرسة في المسابقات المحلية والإقليمية، بهدف إعدادهم وتأهيلهم بأعلى مستويات الكفاءة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Level Up Space. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();</script>
+
+</body>
+</html>
